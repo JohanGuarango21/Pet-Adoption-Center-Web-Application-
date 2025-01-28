@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bouquet of Roses</title>
+  <style>
+    canvas {
+      display: block;
+      margin: 0 auto;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="bouquetCanvas" width="600" height="600"></canvas>
+
+  <script>
+    const canvas = document.getElementById("bouquetCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Function to draw a rose-like flower
+    function drawRose(x, y, size, petalCount) {
+      for (let i = 0; i < petalCount; i++) {
+        const angle = (Math.PI * 2 * i) / petalCount;
+        const petalX = x + Math.cos(angle) * size * 0.6;
+        const petalY = y + Math.sin(angle) * size * 0.6;
+
+        ctx.beginPath();
+        ctx.arc(petalX, petalY, size * 0.3, 0, Math.PI * 2);
+        ctx.fillStyle = "red";
+        ctx.fill();
+      }
+
+      // Draw the center
+      ctx.beginPath();
+      ctx.arc(x, y, size * 0.4, 0, Math.PI * 2);
+      ctx.fillStyle = "darkred";
+      ctx.fill();
+    }
+
+    // Function to draw the bouquet stems
+    function drawStems(x, y, rosePositions) {
+      ctx.strokeStyle = "green";
+      ctx.lineWidth = 4;
+
+      rosePositions.forEach(([roseX, roseY]) => {
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(roseX, roseY + 20);
+        ctx.stroke();
+      });
+    }
+
+    // Function to draw the bouquet
+    function drawBouquet() {
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 1.2;
+
+      // Rose positions relative to bouquet center
+      const rosePositions = [
+        [centerX - 50, centerY - 100],
+        [centerX, centerY - 120],
+        [centerX + 50, centerY - 100],
+        [centerX - 70, centerY - 60],
+        [centerX + 70, centerY - 60],
+      ];
+
+      // Draw stems
+      drawStems(centerX, centerY, rosePositions);
+
+      // Draw roses
+      rosePositions.forEach(([x, y]) => {
+        drawRose(x, y, 30, 8);
+      });
+    }
+
+    drawBouquet();
+  </script>
+</body>
+</html>

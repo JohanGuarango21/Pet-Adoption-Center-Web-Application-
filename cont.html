@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+        </head>
+    <style>
+        html{
+            background-color:rgb(63, 150, 187);
+            color: rgb(255, 255, 255);
+        }
+        body{
+            font-size: 20px;
+            
+        }
+        .Banner{
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            font-size: 28px;
+            font-family: 'Times New Roman', Times, serif;
+            width: 102%;
+            height: 130px;
+            margin: 0 auto;
+            margin-top: -20px;
+            margin-left: -20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .Lines{
+            background-color: rgb(24, 26, 147);
+            width: 102%;
+            height: 10px;
+            margin-left: -20px;
+        }
+        a {
+            color: rgb(3, 3, 3); 
+            text-decoration: none; 
+        }
+        a:hover {
+            color: rgb(38, 17, 175); 
+        }
+        .box {
+            width: 350px;
+            padding: 10px;
+            border: 5px solid  rgb(24, 26, 147);
+            border-radius: 5px;
+            text-align: center;
+            margin: 10px auto;
+        }
+        .box img {
+            width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function ValidateForm() {
+            if (document.forms["Formie"]["Name"].value == null || document.forms["Formie"]["Name"].value == "") {
+                alert("Name must be filled out.");
+                return false;
+            }
+        
+            if (document.forms["Formie"]["Email"].value == null || document.forms["Formie"]["Email"].value == "") {
+                alert("Email must be filled out.");
+                return false;
+            }
+
+            if (document.forms["Formie"]["PhoneNumber"].value==null || document.forms["Formie"]["PhoneNumber"].value =="") {
+                alert("Phone Number must be filled out.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <body>
+        <div class="Banner">
+            <a href="project.html"> <img src="imgs/logos.png" width="25%" style="margin-left:30px;padding-top:15px" alt="Image of the logo"></a>
+            <img src="imgs/laying.gif" width="15.8%" style="position:absolute;top: -1%; left: 22%;" alt="slepping cat">
+             <a href="adopt.html" style="margin-left:170px;padding-top:10px"><b>Adopt</b></a>
+             <a href="donate.html" style="margin-left:60px;padding-top:10px"><b>Donate</b></a>
+             <a href="abot.html" style="margin-left:60px;padding-top:10px"><b>About Us</b></a>
+             <a href="cont.html" style="margin-left:60px;padding-top:10px"><b>Contact Us</b></a>
+             </div>
+         <div class="Lines">
+    </body>
+    <br>
+
+    <p style="text-align:Center;font-size:50px;color:rgb(234, 178, 73)">------Hours Of Operations------</p>
+    <p style="text-align:Center;font-size:30px;">Mon - Sunday 10:00 AM - 6:00pm</p>
+
+    <table border="10" style="width:70%;margin:0 auto;padding-top:50px">
+        <tr style="color: rgb(24, 26, 147); font-size:30px" align="center">
+            <th width = "10%">Phone</th>
+            <th width = "10%">Email</th>
+            <th width = "10%">Address</th>
+        </tr>
+        <tr style="color:rgb(255, 255, 255);font-size:30px" align="center">
+            <td>+1 (464)-542-5942 <img src="imgs/phone.png" width="30%" style="display: block; margin:0 auto" alt="Image of a Phone"></td>
+            <td><a href="mailto:AdoptUs@aol.com" style="color:rgb(255, 255, 255)">AdoptUs@aol.com</a> <img src="imgs/pasw.webp" width="30%" style="display: block; margin: 0 auto" alt="image of mail"></td>
+            <td><address><a href="https://goo.gl/maps/hd7n3xa6XBx6QTeq9" style="color:white">789 Oak Avenue Lakeside, TX 75034</a></address><img src="imgs/incos.png" width="35%" alt="image of map"></td>    
+        </tr>
+    </table>
+
+    <p style="text-align:center;font-size:30px"> In Need of More Information?</p>
+    <form name="Formie" onsubmit="return ValidateForm()">
+        <fieldset>
+            <legend style="text-align: center;font-size:30px">Contact Us</legend>
+            Name: <input type="text" name="Name"> <br><br>
+            Email: <input type="text" name="Email"><br><br>
+            Phone Number: <input type="text" name="PhoneNumber"><br><br>
+            <textarea rows = "10" cols="50px">What is your issue?/Comment</textarea><br><br><br>
+            <input style="width:200px;height:50px;background-color: rgb(24, 26, 147);color:white" type="submit" value="Click to Submit">
+            <img src="imgs/dawg.jpg" width="40%" style="position:absolute;top: 120%; left: 40%;border:7px solid black" alt="It is a Dog">
+    </form>
+    <br>
+    <body>
+</html>

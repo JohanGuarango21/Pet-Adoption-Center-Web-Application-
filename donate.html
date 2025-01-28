@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Donate</title>
+        <style>
+            html{
+                background-color: rgb(255, 196, 43);
+                color: rgb(255, 255, 255);
+            }
+            body{
+                font-size: 20px;
+            }
+            .Banner{
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+                font-size: 28px;
+                font-family: 'Times New Roman', Times, serif;
+                width: 102%;
+                height: 130px;
+                margin: 0 auto;
+                margin-top: -20px;
+                margin-left: -20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+            .Lines{
+                background-color: rgb(24, 26, 147);
+                width: 102%;
+                height: 10px;
+                margin-left: -20px;
+            }
+            a {
+                color: rgb(3, 3, 3); 
+                text-decoration: none; 
+            }
+            a:hover {
+                color: rgb(38, 17, 175); 
+            }
+        </style>
+        <script>
+            function ValidateForm() {
+                if (document.forms["Formie"]["Name"].value == null || document.forms["Formie"]["Name"].value == "") {
+                    alert("Name must be filled out.");
+                    return false;
+                }
+            
+                if (document.forms["Formie"]["Email"].value == null || document.forms["Formie"]["Email"].value == "") {
+                    alert("Email must be filled out.");
+                    return false;
+                }
+    
+                if (document.forms["Formie"]["PhoneNumber"].value==null || document.forms["Formie"]["PhoneNumber"].value =="") {
+                    alert("Phone Number must be filled out.");
+                    return false;
+                }
+                if (document.forms["Formie"]["Amount"].value==null || document.forms["Formie"]["Amount"].value =="") {
+                    alert("Amount must be filled out.");
+                    return false;
+                }
+                if (document.forms["Formie"]["Card Number"].value==null || document.forms["Formie"]["Card Number"].value =="") {
+                    alert("Card Number must be filled out.");
+                    return false;
+                }
+                if (document.forms["Formie"]["CVV"].value==null || document.forms["Formie"]["CVV"].value =="") {
+                    alert("CVV must be filled out.");
+                    return false;
+                }
+                else{
+                    alert("Thank You");
+                }
+              
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="Banner">
+            <a href="project.html"> <img src="imgs/logos.png" width="25%" style="margin-left:30px;padding-top:15px" alt="Image of the logo"></a>
+            <img src="imgs/laying.gif" width="15.8%" style="position:absolute;top: -1%; left: 22%;" alt="slepping cat">
+             <a href="adopt.html" style="margin-left:170px;padding-top:10px"><b>Adopt</b></a>
+             <a href="donate.html" style="margin-left:60px;padding-top:10px"><b>Donate</b></a>
+             <a href="abot.html" style="margin-left:60px;padding-top:10px"><b>About Us</b></a>
+             <a href="cont.html" style="margin-left:60px;padding-top:10px"><b>Contact Us</b></a>
+             </div>
+         <div class="Lines" style="padding-top:15px">
+
+            <div style="background-color: rgb(0,74,172);">
+                <img src="imgs/diante.png" width="40%" style="display:block;margin: 0 auto;" alt="Image of Donation">
+            </div>
+
+             <p style="text-align:center;color:black;font-size:35px"><b>The Animals Need Your Help!</b></p>
+             <p style="text-align:center;padding-left:30px;padding-right:30px;color:black;font-size:25px;">Your support is vital to the success 
+                of Adopt Us and the animals we care for. Donations help us provide essential resources such as food, medical care, and shelter for the pets
+                in our care. Whether you choose to make a one-time contribution or set up a recurring donation, your generosity directly impacts the lives of countless animals
+                 In addition to monetary donations, we welcome supplies such as pet food, toys, blankets, and other essentials. Every donation, big or small, helps us continue
+                  our mission of finding loving homes for pets in need and enhancing their quality of life while they await adoption. Together, we can make a dif   create 
+                  a brighter future for animals in our community.</p>
+        <br>
+        <img src="imgs/plis.jpg" width="20%" style="float: left; border: 8px solid black; margin-left: 90px;" alt="please donate">
+        <form name="Formie" onsubmit="return ValidateForm()">
+            <fieldset style="width:40%;display:block;margin: 0 auto">
+                <legend style="text-align: center;font-size:30px;color:black">Credit Only</legend>
+                Name: <input type="text" name="Name"> <br><br>
+                Email: <input type="text" name="Email"><br><br>
+                Phone Number: <input type="text" name="PhoneNumber"><br><br>
+                Amount: $ <input type="text" name = "Amount"> <br> <br>
+                Card Number <input type ="text" name ="Card Number"><br><br>
+                CVV <input type ="text" name ="CVV"><br><br>    
+                Would you like this to be an accrual? <br>
+                Date: <input type = "Date" name="Date"> <br> <br>
+            <input type="radio" name="Xbox" value="yes"  checked />yes<br>  
+           <input type="radio" name="Xbox" value="no" /> No <br>
+            <p>Select your desired amount</p>
+            <input type="checkbox" name = "Option 1" checked  /> $1000 <br>
+            <input type="checkbox" name = "Option 2" /> $750 <br>
+            <input type="checkbox" name = "Option 3" /> $500 <br>
+            <input type="checkbox" name = "Option 3" /> $250 <br>
+                
+                <input style="width:200px;height:50px;background-color: rgb(24, 26, 147);color:white; cursor: pointer;border-radius:10px rgb(0,74,172)" type="submit" value="Click to Submit">
+
+        </form>        
+
+    </body>
+</html>
